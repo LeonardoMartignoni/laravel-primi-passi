@@ -26,6 +26,15 @@ Route::get('/', function () {
     return view('home', compact('welcome', 'nav'));
 })->name('home');
 
-Route::get('/link', function () {
-    return view('link');
+Route::get('/link/{index}', function ($index) {
+    $nav = [
+        "Home",
+        "About Us",
+        "Contacts",
+        "Shop"
+    ];
+
+    $current_nav = $nav[$index];
+
+    return view('link', compact('current_nav'));
 })->name('nav-link');

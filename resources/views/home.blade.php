@@ -13,7 +13,7 @@
     <nav>
       <ul>
         @foreach ($nav as $link)
-          <li><a href="{{ route('nav-link') }}">{{ $link }}</a></li>
+          <li><a href="{{ route('nav-link', ['index' => $loop->index]) }}">{{ $link }}</a></li>
         @endforeach
       </ul>
     </nav>

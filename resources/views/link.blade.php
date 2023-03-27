@@ -9,7 +9,8 @@
 </head>
 
 <body>
-  <a href="{{ route('home') }}">Torna alla home</a>
+  <h1>{{ $current_nav }} section</h1>
+  <a href="{{ route('home') }}">Back to home</a>
 </body>
 
 </html>
