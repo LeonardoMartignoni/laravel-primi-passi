@@ -14,7 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $nav = [
+        "Home",
+        "About Us",
+        "Contacts",
+        "Shop"
+    ];
+
     $welcome = "Hello World!";
 
-    return view('home', compact('welcome'));
-});
+    return view('home', compact('welcome', 'nav'));
+})->name('home');
+
+Route::get('/link', function () {
+    return view('link');
+})->name('nav-link');
